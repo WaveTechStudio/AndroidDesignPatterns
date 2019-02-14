@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Android Design Patterns</string>
+    <string name="the_factory_pattern">The Factory Pattern</string>
+</resources>
