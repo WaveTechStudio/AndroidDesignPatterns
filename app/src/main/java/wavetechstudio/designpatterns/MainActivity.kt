@@ -2,12 +2,15 @@ package wavetechstudio.designpatterns
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.wavetechstudio.theiteratorpattern.PakistaniTeam
 import com.wavtechstudio.theobserverpatter.Celebrity
 import com.wavtechstudio.theobserverpatter.Follower
 import kotlinx.android.synthetic.main.activity_main.*
 import wavetechstudio.thefactorypattern.BreadFactory
 
 class MainActivity : AppCompatActivity() {
+
+    var stringBuilder: StringBuilder = StringBuilder()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,9 +19,11 @@ class MainActivity : AppCompatActivity() {
         //The Factory Pattern
         theFactoryPatter()
 
-
         //The Observer Pattern
         theObserverPattern()
+
+        // The Iterator Pattern
+        theIteratorPattern()
     }
 
 
@@ -31,8 +36,6 @@ class MainActivity : AppCompatActivity() {
         val baugette = breadFactory.getBread(BreadFactory.BAG)
         val brioche = breadFactory.getBread(BreadFactory.BRI)
         val roll = breadFactory.getBread(BreadFactory.ROL)
-
-        val stringBuilder = StringBuilder()
 
         label.text = stringBuilder.append(getString(R.string.the_factory_pattern))
         label.text = stringBuilder.append("\n").append(roll.name()).append(roll.calories())
@@ -76,6 +79,27 @@ class MainActivity : AppCompatActivity() {
 
         // Afridi is tweeting
         afridi.tweet("Cricket world cup 2019 has been started this month!!")
+
+    }
+
+
+    /**
+     * The Iterator Pattern
+     */
+    fun theIteratorPattern() {
+
+        // Creating team object so that we can iterate players
+        val pakistaniTeam = PakistaniTeam()
+        val pakistaniTeamIterator = pakistaniTeam.createIterator()
+
+        label.text = stringBuilder.append("\n\n\n").append(getString(R.string.the_iterator_pattern))
+
+        while (pakistaniTeamIterator.hasNext()) {
+            label.text = stringBuilder.append("\n").append(pakistaniTeamIterator.next())
+        }
+
+        pakistaniTeamIterator.first()
+        label.text = stringBuilder.append("\n").append(pakistaniTeamIterator.currentItem())
 
     }
 }
