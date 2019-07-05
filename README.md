@@ -4,6 +4,11 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 
 | Design Patterns | README |
 | ------ | ------ |
-| Factory Pattern | [TheFactoryPattern/README.md]
-| Observer Pattern | [TheObserverPattern/README.md]
-| Iterator Pattern | [TheIteratorPattern/README.md]
+| Factory Pattern | [TheFactoryPattern/README.md][Factory] |
+| Observer Pattern | [TheObserverPattern/README.md][Observer] |
+| Iterator Pattern | [TheIteratorPattern/README.md][Iterator] |
+
+
+  [Factory]: <https://github.com/WaveTechStudio/AndroidDesignPatterns/blob/master/TheFactoryPattern/README.md>
+  [Observer]: <https://github.com/WaveTechStudio/AndroidDesignPatterns/blob/master/TheObserverPattern/README.md>
+  [Iterator]: <https://github.com/WaveTechStudio/AndroidDesignPatterns/blob/master/TheIteratorPattern/README.md>
