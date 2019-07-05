@@ -15,12 +15,17 @@ class PakistaniTeam : Subjects {
         players.add("Waseem Akram")
     }
 
-
+    /**
+     * Creating Player's Iterator
+     */
     override fun createIterator(): Iterator {
         return PlayersIterator(players)
     }
 
 
+    /**
+     * Creating Players Iterator class for Pakistani Team
+     */
     private class PlayersIterator(private val players: ArrayList<String>) : Iterator {
 
         private var position: Int = 0

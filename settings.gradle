@@ -1,1 +1,1 @@
-include ':app', ':TheFactoryPattern', ':TheObserverPattern', ':TheIteratorPattern'
+include ':app', ':TheFactoryPattern', ':TheObserverPattern', ':TheIteratorPattern', ':TheIteratorPatternUsingBuiltInIterator'

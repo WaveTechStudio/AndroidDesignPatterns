@@ -6,4 +6,8 @@
     <string name="the_iterator_pattern">
         <b>The Iterator Pattern</b>
     </string>
+
+    <string name="the_iterator_pattern_using_built_in_iterator">
+        <b>The Iterator Pattern Using Built In Iterator</b>
+    </string>
 </resources>

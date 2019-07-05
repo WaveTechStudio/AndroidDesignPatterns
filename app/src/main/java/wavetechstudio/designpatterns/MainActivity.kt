@@ -3,6 +3,7 @@ package wavetechstudio.designpatterns
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.wavetechstudio.theiteratorpattern.PakistaniTeam
+import com.wavetechstudio.theiteratorpatternusingbuiltiniterator.AustralianTeam
 import com.wavtechstudio.theobserverpatter.Celebrity
 import com.wavtechstudio.theobserverpatter.Follower
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         // The Iterator Pattern
         theIteratorPattern()
+
+        // The Iterator Pattern Using Built In Iterator
+        theIteratorPatternUsigBuiltInIterator()
     }
 
 
@@ -47,7 +51,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * The Observer Pattern
      */
-    fun theObserverPattern() {
+    private fun theObserverPattern() {
 
         // Creating two celebrities to test
         val ronaldo = Celebrity("Ronaldo")
@@ -86,7 +90,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * The Iterator Pattern
      */
-    fun theIteratorPattern() {
+    private fun theIteratorPattern() {
 
         // Creating team object so that we can iterate players
         val pakistaniTeam = PakistaniTeam()
@@ -101,5 +105,26 @@ class MainActivity : AppCompatActivity() {
         pakistaniTeamIterator.first()
         label.text = stringBuilder.append("\n").append(pakistaniTeamIterator.currentItem())
 
+    }
+
+    /**
+     * The Iterator Pattern using built in Iterator
+     */
+    private fun theIteratorPatternUsigBuiltInIterator() {
+
+        // Creating team object so that we can iterate players
+        // Creating team object so that we can iterate players
+        val australianTeam = AustralianTeam()
+        val australianTeamIterator = australianTeam.createIterator()
+
+        label.text =
+            stringBuilder.append("\n\n\n").append(getString(R.string.the_iterator_pattern_using_built_in_iterator))
+
+        while (australianTeamIterator.hasNext()) {
+            label.text = stringBuilder.append("\n").append(australianTeamIterator.next())
+        }
+
+        australianTeamIterator.first()
+        label.text = stringBuilder.append("\n").append(australianTeamIterator.currentItem())
     }
 }
