@@ -4,6 +4,6 @@ Dillinger is currently extended with the following plugins. Instructions on how 
 
 | Design Patterns | README |
 | ------ | ------ |
-| Factory Pattern | [TheFactoryPattern/README.md][PlDb] |
-| Observer Pattern | [TheObserverPattern/README.md][PlGh] |
-| Iterator Pattern | [TheIteratorPattern/README.md][PlGd]
+| Factory Pattern | [TheFactoryPattern/README.md]
+| Observer Pattern | [TheObserverPattern/README.md]
+| Iterator Pattern | [TheIteratorPattern/README.md]
