@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.wavetechstudio.theiteratorpattern.PakistaniTeam
 import com.wavetechstudio.theiteratorpatternusingbuiltiniterator.AustralianTeam
+import com.wavetechstudio.theiteratorpatternusingbuiltiniterator.customObjectsIterator.AfricanTeam
 import com.wavtechstudio.theobserverpatter.Celebrity
 import com.wavtechstudio.theobserverpatter.Follower
 import kotlinx.android.synthetic.main.activity_main.*
@@ -28,6 +29,9 @@ class MainActivity : AppCompatActivity() {
 
         // The Iterator Pattern Using Built In Iterator
         theIteratorPatternUsigBuiltInIterator()
+
+        // The Iterator Pattern Using Built In Iterator With Custom Data Types
+        theIteratorPatternUsigBuiltInIteratorWithCutomDataTypes()
     }
 
 
@@ -126,5 +130,27 @@ class MainActivity : AppCompatActivity() {
 
         australianTeamIterator.first()
         label.text = stringBuilder.append("\n").append(australianTeamIterator.currentItem())
+    }
+
+    /**
+     * The Iterator Pattern using built in Iterator With Custom Data Type
+     */
+    private fun theIteratorPatternUsigBuiltInIteratorWithCutomDataTypes() {
+
+        // Creating team object so that we can iterate players
+        // Creating team object so that we can iterate players
+        val africanTeam = AfricanTeam()
+        val africanTeamCustomIterator = africanTeam.createCustomIterator()
+
+        label.text =
+            stringBuilder.append("\n\n\n")
+                .append(getString(R.string.the_iterator_pattern_using_built_in_iterator_with_custom_data_types))
+
+        while (africanTeamCustomIterator.hasNext()) {
+            label.text = stringBuilder.append("\n").append(africanTeamCustomIterator.next().toString())
+        }
+
+        africanTeamCustomIterator.first()
+        label.text = stringBuilder.append("\n").append(africanTeamCustomIterator.currentItem().toString())
     }
 }

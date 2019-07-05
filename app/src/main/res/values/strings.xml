@@ -10,4 +10,8 @@
     <string name="the_iterator_pattern_using_built_in_iterator">
         <b>The Iterator Pattern Using Built In Iterator</b>
     </string>
+
+    <string name="the_iterator_pattern_using_built_in_iterator_with_custom_data_types">
+        <b>The Iterator Pattern Using Built In Iterator With Custom Iterator</b>
+    </string>
 </resources>
